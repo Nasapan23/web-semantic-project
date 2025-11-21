@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 import java.io.File;
@@ -26,6 +27,8 @@ public class XSLTransformServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        InputStream xslStream = null;
+        
         try {
             String userId = request.getParameter("userId");
             User user = null;
@@ -40,29 +43,26 @@ public class XSLTransformServlet extends HttpServlet {
                 userSkillLevel = user.getCookingSkillLevel();
             }
 
-            String xmlPath = getServletContext().getRealPath("/WEB-INF/classes/data/recipes.xml");
-            String xslPath = getServletContext().getRealPath("/WEB-INF/xsl/recipes.xsl");
-
-            InputStream xmlStream = null;
-            InputStream xslStream = null;
-
-            if (xmlPath != null && new File(xmlPath).exists()) {
-                xmlStream = new java.io.FileInputStream(xmlPath);
-            } else {
-                xmlStream = getClass().getClassLoader().getResourceAsStream("data/recipes.xml");
+            // Load XSL file - try multiple locations
+            xslStream = getServletContext().getResourceAsStream("/WEB-INF/xsl/recipes.xsl");
+            if (xslStream == null) {
+                xslStream = getClass().getClassLoader().getResourceAsStream("xsl/recipes.xsl");
             }
-
-            if (xslPath != null && new File(xslPath).exists()) {
-                xslStream = new java.io.FileInputStream(xslPath);
-            } else {
-                xslStream = getServletContext().getResourceAsStream("/WEB-INF/xsl/recipes.xsl");
-                if (xslStream == null) {
-                    xslStream = getClass().getClassLoader().getResourceAsStream("xsl/recipes.xsl");
+            if (xslStream == null) {
+                String xslPath = getServletContext().getRealPath("/WEB-INF/xsl/recipes.xsl");
+                if (xslPath != null && new File(xslPath).exists()) {
+                    xslStream = new java.io.FileInputStream(xslPath);
                 }
             }
 
-            if (xmlStream == null || xslStream == null) {
-                throw new IOException("Could not find XML or XSL files");
+            if (xslStream == null) {
+                throw new IOException("Could not find XSL file: /WEB-INF/xsl/recipes.xsl");
+            }
+
+            // Get the Document from XMLUtil (already loaded)
+            org.w3c.dom.Document document = xmlUtil.getDocument();
+            if (document == null) {
+                throw new IOException("XML document is not loaded. XMLUtil initialization may have failed.");
             }
 
             TransformerFactory factory = TransformerFactory.newInstance();
@@ -71,17 +71,25 @@ public class XSLTransformServlet extends HttpServlet {
             transformer.setParameter("userSkillLevel", userSkillLevel);
 
             response.setContentType("text/html;charset=UTF-8");
+            
+            // Transform using the Document from XMLUtil
             transformer.transform(
-                new StreamSource(xmlStream),
+                new DOMSource(document),
                 new StreamResult(response.getWriter())
             );
 
-            if (xmlStream != null) xmlStream.close();
-            if (xslStream != null) xslStream.close();
         } catch (Exception e) {
             response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, 
                 "Error transforming XML: " + e.getMessage());
             e.printStackTrace();
+        } finally {
+            if (xslStream != null) {
+                try {
+                    xslStream.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
 }
