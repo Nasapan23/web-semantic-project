@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT recipeData (recipes, users)>
+<!ELEMENT recipes (recipe*)>
+<!ELEMENT recipe (title, description?, cuisineTypes, difficultyLevel, cookingTime?, servings?, ingredients, instructions)>
+<!ATTLIST recipe id ID #REQUIRED>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT cuisineTypes (cuisine+)>
+<!ELEMENT cuisine (#PCDATA)>
+<!ELEMENT difficultyLevel (#PCDATA)>
+<!ELEMENT cookingTime (#PCDATA)>
+<!ELEMENT servings (#PCDATA)>
+<!ELEMENT ingredients (ingredient+)>
+<!ELEMENT ingredient (#PCDATA)>
+<!ELEMENT instructions (step+)>
+<!ELEMENT step (#PCDATA)>
+<!ELEMENT users (user*)>
+<!ELEMENT user (name, surname, cookingSkillLevel, preferredCuisineType)>
+<!ATTLIST user id ID #REQUIRED>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT surname (#PCDATA)>
+<!ELEMENT cookingSkillLevel (#PCDATA)>
+<!ELEMENT preferredCuisineType (#PCDATA)>
+
+

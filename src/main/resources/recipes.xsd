@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+
+    <!-- Root element -->
+    <xs:element name="recipeData">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="recipes" type="recipesType"/>
+                <xs:element name="users" type="usersType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Recipes type -->
+    <xs:complexType name="recipesType">
+        <xs:sequence>
+            <xs:element name="recipe" type="recipeType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Recipe type -->
+    <xs:complexType name="recipeType">
+        <xs:sequence>
+            <xs:element name="title" type="xs:string"/>
+            <xs:element name="description" type="xs:string" minOccurs="0"/>
+            <xs:element name="cuisineTypes" type="cuisineTypesType"/>
+            <xs:element name="difficultyLevel" type="difficultyLevelType"/>
+            <xs:element name="cookingTime" type="xs:string" minOccurs="0"/>
+            <xs:element name="servings" type="xs:string" minOccurs="0"/>
+            <xs:element name="ingredients" type="ingredientsType"/>
+            <xs:element name="instructions" type="instructionsType"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:ID" use="required"/>
+    </xs:complexType>
+    
+    <!-- Ingredients type -->
+    <xs:complexType name="ingredientsType">
+        <xs:sequence>
+            <xs:element name="ingredient" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <!-- Instructions type -->
+    <xs:complexType name="instructionsType">
+        <xs:sequence>
+            <xs:element name="step" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Cuisine types -->
+    <xs:complexType name="cuisineTypesType">
+        <xs:sequence>
+            <xs:element name="cuisine" type="xs:string" minOccurs="1" maxOccurs="2"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Difficulty level -->
+    <xs:simpleType name="difficultyLevelType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Beginner"/>
+            <xs:enumeration value="Intermediate"/>
+            <xs:enumeration value="Advanced"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Users type -->
+    <xs:complexType name="usersType">
+        <xs:sequence>
+            <xs:element name="user" type="userType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- User type -->
+    <xs:complexType name="userType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="surname" type="xs:string"/>
+            <xs:element name="cookingSkillLevel" type="difficultyLevelType"/>
+            <xs:element name="preferredCuisineType" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:ID" use="required"/>
+    </xs:complexType>
+
+</xs:schema>
+
+

@@ -1,0 +1,49 @@
+Attention: To receive the grade, you must present the project during the laboratory on 24th November, regardless of your semi-group. So all the groups will present ONLY during that laboratory. Delays are not accepted.
+
+Do not copy code from your colleagues or share your solutions with others. You will be asked to explain your code and justify your choices. If you cannot explain how your code works, you will receive a lower grade.
+
+Maximum 3 students can work on the assignment.
+
+Develop a web application in Java to facilitate the recommendation of suitable recipes to a certain user. Each recipe has a title, 2 cuisine types (e.g., “Italian, Asian”), and 3 difficulty levels (e.g., Beginner, Intermediate, Advanced). Each user has a name, surname, 1 cooking skill level, and 1 preferred cuisine type.
+
+Create input data for at least 20 recipes in XML format and 1 user.
+You can add the recipes manually in your XML file, or you can scrape them from:
+https://www.bbcgoodfood.com/recipes/collection/budget-autumn
+
+0.5 points for manual input
+
+1.5 points for scraping from a website (scrape only the title, the cuisine types, and difficulty levels will be added by you randomly, e.g., arrays with predefined values that will be assigned randomly for each recipe)
+
+Create DTD/XSD for your data. (0.5 points)
+
+Read in memory the list of recipes from your local XML file and also show them in your developed UI. (0.5 points)
+
+Create a form in which users can add a recipe.
+Add the recipe to your XML list (in memory) and save it to your local XML file. Validate the input before saving. (0.5 points)
+
+Create a form to insert user data and save it to your XML. (1 point)
+
+Recommend recipes to the user based on their cooking skill level.
+Use XPath/XQuery and select the first user from your XML file. (1 point)
+
+Recommend recipes based on both cooking skill level and preferred cuisine type.
+Use XPath/XQuery and select the first user from your XML file. (1 point)*
+
+Display the list of recipes from your local XML file/database on the web interface.
+First, read it into memory and then display it using XSL.*
+
+Recipes that match the user’s cooking skill level should have a yellow background.
+
+Others should have a green background.
+(1 point)
+
+Allow the user to see all the details of a specific recipe.
+Use XPath/XQuery to filter and display the data. (1 point)*
+
+Provide the list of recipes matching a specific cuisine type.
+The user can select a cuisine type from a given set of options. Use XPath/XQuery to retrieve the recipes. (1 point)*
+
+Create a nice and intuitive graphical interface for your application.
+(For full grade the UI must be intuitive: in exercise 8 I want to be able to select a certain user – just an example, you can add other details you consider nice to have.) (1 point)*
+
+You must use XML, DTD/XML Schema, XSL, XPATH/XQUERY to store and query the data.

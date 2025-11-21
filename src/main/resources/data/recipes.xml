@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../xsl/recipes.xsl"?>
+<!DOCTYPE recipeData SYSTEM "../recipes.dtd">
+<recipeData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:noNamespaceSchemaLocation="../recipes.xsd">
+    <recipes>
+        <recipe id="r1">
+            <title>Spaghetti Carbonara</title>
+            <description>Classic Italian pasta dish with eggs, cheese, pancetta, and black pepper. A creamy and delicious comfort food.</description>
+            <cuisineTypes>
+                <cuisine>Italian</cuisine>
+                <cuisine>European</cuisine>
+            </cuisineTypes>
+            <difficultyLevel>Intermediate</difficultyLevel>
+            <cookingTime>30 minutes</cookingTime>
+            <servings>4</servings>
+            <ingredients>
+                <ingredient>400g spaghetti</ingredient>
+                <ingredient>200g pancetta or guanciale, diced</ingredient>
+                <ingredient>4 large eggs</ingredient>
+                <ingredient>100g Pecorino Romano cheese, grated</ingredient>
+                <ingredient>Black pepper, freshly ground</ingredient>
+                <ingredient>Salt</ingredient>
+            </ingredients>
+            <instructions>
+                <step>Bring a large pot of salted water to a boil and cook spaghetti according to package directions until al dente.</step>
+                <step>While pasta cooks, heat a large pan over medium heat and cook pancetta until crispy, about 5-7 minutes.</step>
+                <step>In a bowl, whisk together eggs, grated cheese, and a generous amount of black pepper.</step>
+                <step>Drain pasta, reserving 1 cup of pasta water. Add hot pasta to the pan with pancetta, remove from heat.</step>
+                <step>Quickly pour the egg mixture over the pasta, tossing constantly. Add pasta water as needed to create a creamy sauce.</step>
+                <step>Serve immediately with extra cheese and black pepper on top.</step>
+            </instructions>
+        </recipe>
+        <recipe id="r2">
+            <title>Chicken Tikka Masala</title>
+            <description>Rich and creamy Indian curry with tender chicken pieces in a spiced tomato-based sauce.</description>
+            <cuisineTypes>
+                <cuisine>Indian</cuisine>
+                <cuisine>Asian</cuisine>
+            </cuisineTypes>
+            <difficultyLevel>Advanced</difficultyLevel>
+            <cookingTime>60 minutes</cookingTime>
+            <servings>4</servings>
+            <ingredients>
+                <ingredient>500g chicken breast, cubed</ingredient>
+                <ingredient>1 cup plain yogurt</ingredient>
+                <ingredient>2 tbsp garam masala</ingredient>
+                <ingredient>1 can (400g) crushed tomatoes</ingredient>
+                <ingredient>1 cup heavy cream</ingredient>
+                <ingredient>1 onion, diced</ingredient>
+                <ingredient>3 cloves garlic, minced</ingredient>
+                <ingredient>1 inch ginger, grated</ingredient>
+                <ingredient>2 tbsp vegetable oil</ingredient>
+                <ingredient>Salt and pepper to taste</ingredient>
+            </ingredients>
+            <instructions>
+                <step>Marinate chicken in yogurt and half the garam masala for at least 30 minutes.</step>
+                <step>Heat oil in a large pan and cook chicken until browned, then set aside.</step>
+                <step>In the same pan, sauté onions until soft, then add garlic and ginger.</step>
+                <step>Add remaining garam masala and cook for 1 minute until fragrant.</step>
+                <step>Add crushed tomatoes and simmer for 10 minutes.</step>
+                <step>Return chicken to pan, add cream, and simmer for 15 minutes.</step>
+                <step>Season with salt and pepper. Serve with rice or naan.</step>
+            </instructions>
+        </recipe>
+        <recipe id="r3">
+            <title>Caesar Salad</title>
+            <description>Fresh romaine lettuce with homemade Caesar dressing, croutons, and parmesan cheese. A classic salad that's easy to make.</description>
+            <cuisineTypes>
+                <cuisine>American</cuisine>
+                <cuisine>Mediterranean</cuisine>
+            </cuisineTypes>
+            <difficultyLevel>Beginner</difficultyLevel>
+            <cookingTime>15 minutes</cookingTime>
+            <servings>4</servings>
+            <ingredients>
+                <ingredient>2 heads romaine lettuce, chopped</ingredient>
+                <ingredient>1/2 cup parmesan cheese, grated</ingredient>
+                <ingredient>1 cup croutons</ingredient>
+                <ingredient>3 cloves garlic, minced</ingredient>
+                <ingredient>2 anchovy fillets</ingredient>
+                <ingredient>1/4 cup olive oil</ingredient>
+                <ingredient>2 tbsp lemon juice</ingredient>
+                <ingredient>1 tsp Dijon mustard</ingredient>
+                <ingredient>Salt and pepper to taste</ingredient>
+            </ingredients>
+            <instructions>
+                <step>Wash and dry romaine lettuce, then chop into bite-sized pieces.</step>
+                <step>In a small bowl, mash anchovies and garlic together. Whisk in olive oil, lemon juice, and Dijon mustard.</step>
+                <step>Season dressing with salt and pepper to taste.</step>
+                <step>In a large bowl, toss lettuce with dressing until well coated.</step>
+                <step>Add croutons and parmesan cheese, toss gently.</step>
+                <step>Serve immediately.</step>
+            </instructions>
+        </recipe>
+        <recipe id="r4">
+            <title>Beef Stroganoff</title>
+            <description>Classic Russian dish with tender beef strips in a rich sour cream sauce, served over egg noodles.</description>
+            <cuisineTypes>
+                <cuisine>Russian</cuisine>
+                <cuisine>European</cuisine>
+            </cuisineTypes>
+            <difficultyLevel>Intermediate</difficultyLevel>
+            <cookingTime>45 minutes</cookingTime>
+            <servings>4</servings>
+            <ingredients>
+                <ingredient>500g beef sirloin, sliced into strips</ingredient>
+                <ingredient>1 onion, sliced</ingredient>
+                <ingredient>200g mushrooms, sliced</ingredient>
+                <ingredient>1 cup beef broth</ingredient>
+                <ingredient>1/2 cup sour cream</ingredient>
+                <ingredient>2 tbsp flour</ingredient>
+                <ingredient>2 tbsp butter</ingredient>
+                <ingredient>Salt and pepper to taste</ingredient>
+                <ingredient>Egg noodles for serving</ingredient>
+            </ingredients>
+            <instructions>
+                <step>Season beef strips with salt and pepper, then dust with flour.</step>
+                <step>Heat butter in a large pan and brown beef strips, then remove and set aside.</step>
+                <step>In the same pan, cook onions until soft, then add mushrooms.</step>
+                <step>Add beef broth and bring to a simmer, scraping up browned bits.</step>
+                <step>Return beef to pan and simmer for 10 minutes.</step>
+                <step>Stir in sour cream and heat through without boiling.</step>
+                <step>Serve over cooked egg noodles.</step>
+            </instructions>
+        </recipe>
+        <recipe id="r5">
+            <title>Sushi Rolls</title>
+            <description>Traditional Japanese sushi rolls with fresh fish, rice, and vegetables. Requires practice to perfect.</description>
+            <cuisineTypes>
+                <cuisine>Japanese</cuisine>
+                <cuisine>Asian</cuisine>
+            </cuisineTypes>
+            <difficultyLevel>Advanced</difficultyLevel>
+            <cookingTime>90 minutes</cookingTime>
+            <servings>4</servings>
+            <ingredients>
+                <ingredient>2 cups sushi rice</ingredient>
+                <ingredient>1/4 cup rice vinegar</ingredient>
+                <ingredient>2 tbsp sugar</ingredient>
+                <ingredient>4 nori sheets</ingredient>
+                <ingredient>200g fresh salmon or tuna, sliced</ingredient>
+                <ingredient>1 cucumber, julienned</ingredient>
+                <ingredient>1 avocado, sliced</ingredient>
+                <ingredient>Soy sauce and wasabi for serving</ingredient>
+            </ingredients>
+            <instructions>
+                <step>Cook sushi rice according to package directions. Mix with rice vinegar and sugar while warm.</step>
+                <step>Let rice cool to room temperature.</step>
+                <step>Place nori sheet on a bamboo mat, shiny side down.</step>
+                <step>Spread a thin layer of rice over nori, leaving 1 inch at the top.</step>
+                <step>Arrange fish and vegetables in a line across the rice.</step>
+                <step>Roll tightly using the bamboo mat, pressing firmly.</step>
+                <step>Slice into 8 pieces with a sharp, wet knife.</step>
+                <step>Serve with soy sauce and wasabi.</step>
+            </instructions>
+        </recipe>
+        <recipe id="r6">
+            <title>Margherita Pizza</title>
+            <description>Simple and classic Italian pizza with fresh tomatoes, mozzarella, and basil. The perfect combination of flavors.</description>
+            <cuisineTypes>
+                <cuisine>Italian</cuisine>
+                <cuisine>Mediterranean</cuisine>
+            </cuisineTypes>
+            <difficultyLevel>Beginner</difficultyLevel>
+            <cookingTime>20 minutes</cookingTime>
+            <servings>2-3</servings>
+            <ingredients>
+                <ingredient>1 pizza dough (store-bought or homemade)</ingredient>
+                <ingredient>1/2 cup tomato sauce</ingredient>
+                <ingredient>200g fresh mozzarella, sliced</ingredient>
+                <ingredient>Fresh basil leaves</ingredient>
+                <ingredient>2 tbsp olive oil</ingredient>
+                <ingredient>Salt to taste</ingredient>
+            </ingredients>
+            <instructions>
+                <step>Preheat oven to 475°F (245°C). If using a pizza stone, place it in the oven while preheating.</step>
+                <step>Roll out pizza dough on a floured surface to desired thickness.</step>
+                <step>Transfer dough to a pizza pan or parchment paper.</step>
+                <step>Spread tomato sauce evenly over the dough, leaving a border for the crust.</step>
+                <step>Arrange mozzarella slices over the sauce.</step>
+                <step>Drizzle with olive oil and sprinkle with salt.</step>
+                <step>Bake for 12-15 minutes until crust is golden and cheese is bubbly.</step>
+                <step>Remove from oven, top with fresh basil leaves, and serve hot.</step>
+            </instructions>
+        </recipe>
+        <recipe id="r7">
+            <title>Pad Thai</title>
+            <cuisineTypes>
+                <cuisine>Thai</cuisine>
+                <cuisine>Asian</cuisine>
+            </cuisineTypes>
+            <difficultyLevel>Intermediate</difficultyLevel>
+            <ingredients>
+                <ingredient>200g rice noodles</ingredient>
+                <ingredient>200g shrimp or chicken</ingredient>
+                <ingredient>2 eggs</ingredient>
+                <ingredient>Bean sprouts</ingredient>
+                <ingredient>Pad Thai sauce</ingredient>
+            </ingredients>
+            <instructions>
+                <step>Soak rice noodles in warm water until soft.</step>
+                <step>Heat oil in a wok and cook protein until done.</step>
+                <step>Add eggs and scramble, then add noodles and sauce.</step>
+                <step>Toss everything together and serve with bean sprouts.</step>
+            </instructions>
+        </recipe>
+        <recipe id="r8">
+            <title>Chocolate Chip Cookies</title>
+            <cuisineTypes>
+                <cuisine>American</cuisine>
+                <cuisine>Dessert</cuisine>
+            </cuisineTypes>
+            <difficultyLevel>Beginner</difficultyLevel>
+            <cookingTime>25 minutes</cookingTime>
+            <servings>24 cookies</servings>
+            <ingredients>
+                <ingredient>2 1/4 cups all-purpose flour</ingredient>
+                <ingredient>1 cup butter, softened</ingredient>
+                <ingredient>3/4 cup granulated sugar</ingredient>
+                <ingredient>3/4 cup brown sugar</ingredient>
+                <ingredient>2 large eggs</ingredient>
+                <ingredient>2 cups chocolate chips</ingredient>
+            </ingredients>
+            <instructions>
+                <step>Preheat oven to 375°F (190°C).</step>
+                <step>Mix butter and sugars until creamy.</step>
+                <step>Beat in eggs, then gradually add flour.</step>
+                <step>Stir in chocolate chips.</step>
+                <step>Drop rounded tablespoons onto ungreased baking sheets.</step>
+                <step>Bake for 9-11 minutes until golden brown.</step>
+            </instructions>
+        </recipe>
+        <recipe id="r9">
+            <title>Beef Wellington</title>
+            <cuisineTypes>
+                <cuisine>British</cuisine>
+                <cuisine>European</cuisine>
+            </cuisineTypes>
+            <difficultyLevel>Advanced</difficultyLevel>
+            <ingredients>
+                <ingredient>1kg beef fillet</ingredient>
+                <ingredient>500g puff pastry</ingredient>
+                <ingredient>200g mushrooms, finely chopped</ingredient>
+                <ingredient>Pâté or liver pâté</ingredient>
+            </ingredients>
+            <instructions>
+                <step>Sear beef fillet on all sides, then let cool.</step>
+                <step>Cook mushrooms until dry, then spread on beef.</step>
+                <step>Wrap in puff pastry and seal edges.</step>
+                <step>Bake at 400°F (200°C) for 25-30 minutes.</step>
+            </instructions>
+        </recipe>
+        <recipe id="r10">
+            <title>Chicken Fajitas</title>
+            <cuisineTypes>
+                <cuisine>Mexican</cuisine>
+                <cuisine>American</cuisine>
+            </cuisineTypes>
+            <difficultyLevel>Intermediate</difficultyLevel>
+            <ingredients>
+                <ingredient>500g chicken breast, sliced</ingredient>
+                <ingredient>2 bell peppers, sliced</ingredient>
+                <ingredient>1 onion, sliced</ingredient>
+                <ingredient>Fajita seasoning</ingredient>
+                <ingredient>Tortillas</ingredient>
+            </ingredients>
+            <instructions>
+                <step>Season chicken with fajita seasoning.</step>
+                <step>Cook chicken in a hot pan until done.</step>
+                <step>Add peppers and onions, cook until tender.</step>
+                <step>Serve in warm tortillas with toppings.</step>
+            </instructions>
+        </recipe>
+        <recipe id="r11">
+            <title>Ramen Noodles</title>
+            <cuisineTypes>
+                <cuisine>Japanese</cuisine>
+                <cuisine>Asian</cuisine>
+            </cuisineTypes>
+            <difficultyLevel>Advanced</difficultyLevel>
+            <ingredients>
+                <ingredient>Ramen noodles</ingredient>
+                <ingredient>Pork or chicken broth</ingredient>
+                <ingredient>Soft-boiled eggs</ingredient>
+                <ingredient>Pork belly or chicken</ingredient>
+                <ingredient>Green onions</ingredient>
+            </ingredients>
+            <instructions>
+                <step>Prepare rich broth and simmer for hours.</step>
+                <step>Cook ramen noodles according to package.</step>
+                <step>Slice meat and prepare soft-boiled eggs.</step>
+                <step>Assemble in bowls with broth, noodles, meat, and eggs.</step>
+            </instructions>
+        </recipe>
+        <recipe id="r12">
+            <title>Greek Moussaka</title>
+            <cuisineTypes>
+                <cuisine>Greek</cuisine>
+                <cuisine>Mediterranean</cuisine>
+            </cuisineTypes>
+            <difficultyLevel>Intermediate</difficultyLevel>
+            <ingredients>
+                <ingredient>500g ground lamb or beef</ingredient>
+                <ingredient>2 eggplants, sliced</ingredient>
+                <ingredient>Tomato sauce</ingredient>
+                <ingredient>Béchamel sauce</ingredient>
+            </ingredients>
+            <instructions>
+                <step>Fry eggplant slices until golden.</step>
+                <step>Cook meat with tomato sauce and spices.</step>
+                <step>Layer eggplant and meat in a baking dish.</step>
+                <step>Top with béchamel and bake until golden.</step>
+            </instructions>
+        </recipe>
+        <recipe id="r13">
+            <title>French Onion Soup</title>
+            <cuisineTypes>
+                <cuisine>French</cuisine>
+                <cuisine>European</cuisine>
+            </cuisineTypes>
+            <difficultyLevel>Intermediate</difficultyLevel>
+            <ingredients>
+                <ingredient>4 large onions, sliced</ingredient>
+                <ingredient>Beef broth</ingredient>
+                <ingredient>White wine</ingredient>
+                <ingredient>Gruyère cheese</ingredient>
+                <ingredient>French bread</ingredient>
+            </ingredients>
+            <instructions>
+                <step>Caramelize onions slowly until golden brown.</step>
+                <step>Add wine and broth, simmer for 30 minutes.</step>
+                <step>Ladle into bowls, top with bread and cheese.</step>
+                <step>Broil until cheese is bubbly and golden.</step>
+            </instructions>
+        </recipe>
+        <recipe id="r14">
+            <title>Chicken Curry</title>
+            <cuisineTypes>
+                <cuisine>Indian</cuisine>
+                <cuisine>Asian</cuisine>
+            </cuisineTypes>
+            <difficultyLevel>Intermediate</difficultyLevel>
+            <ingredients>
+                <ingredient>500g chicken, cubed</ingredient>
+                <ingredient>Curry powder or garam masala</ingredient>
+                <ingredient>Coconut milk</ingredient>
+                <ingredient>Onions and garlic</ingredient>
+                <ingredient>Tomatoes</ingredient>
+            </ingredients>
+            <instructions>
+                <step>Sauté onions and spices until fragrant.</step>
+                <step>Add chicken and cook until browned.</step>
+                <step>Add tomatoes and coconut milk, simmer.</step>
+                <step>Cook until chicken is tender and sauce thickens.</step>
+            </instructions>
+        </recipe>
+        <recipe id="r15">
+            <title>Scrambled Eggs</title>
+            <cuisineTypes>
+                <cuisine>American</cuisine>
+                <cuisine>Breakfast</cuisine>
+            </cuisineTypes>
+            <difficultyLevel>Beginner</difficultyLevel>
+            <cookingTime>5 minutes</cookingTime>
+            <servings>2</servings>
+            <ingredients>
+                <ingredient>4 eggs</ingredient>
+                <ingredient>2 tbsp butter</ingredient>
+                <ingredient>Salt and pepper</ingredient>
+                <ingredient>Optional: milk or cream</ingredient>
+            </ingredients>
+            <instructions>
+                <step>Beat eggs with salt and pepper.</step>
+                <step>Heat butter in a non-stick pan over medium heat.</step>
+                <step>Pour in eggs and gently scramble with a spatula.</step>
+                <step>Cook until just set but still creamy.</step>
+                <step>Serve immediately.</step>
+            </instructions>
+        </recipe>
+        <recipe id="r16">
+            <title>Beef Tacos</title>
+            <cuisineTypes>
+                <cuisine>Mexican</cuisine>
+                <cuisine>American</cuisine>
+            </cuisineTypes>
+            <difficultyLevel>Beginner</difficultyLevel>
+            <ingredients>
+                <ingredient>500g ground beef</ingredient>
+                <ingredient>Taco seasoning</ingredient>
+                <ingredient>Hard or soft taco shells</ingredient>
+                <ingredient>Lettuce, tomatoes, cheese</ingredient>
+            </ingredients>
+            <instructions>
+                <step>Brown ground beef in a pan.</step>
+                <step>Add taco seasoning and water, simmer.</step>
+                <step>Warm taco shells.</step>
+                <step>Fill with meat and toppings.</step>
+            </instructions>
+        </recipe>
+        <recipe id="r17">
+            <title>Coq au Vin</title>
+            <cuisineTypes>
+                <cuisine>French</cuisine>
+                <cuisine>European</cuisine>
+            </cuisineTypes>
+            <difficultyLevel>Advanced</difficultyLevel>
+            <ingredients>
+                <ingredient>1 whole chicken, cut into pieces</ingredient>
+                <ingredient>Red wine</ingredient>
+                <ingredient>Bacon</ingredient>
+                <ingredient>Mushrooms</ingredient>
+                <ingredient>Pearl onions</ingredient>
+            </ingredients>
+            <instructions>
+                <step>Brown chicken pieces and set aside.</step>
+                <step>Cook bacon, then add vegetables.</step>
+                <step>Return chicken, add wine and herbs.</step>
+                <step>Simmer for 1 hour until chicken is tender.</step>
+            </instructions>
+        </recipe>
+        <recipe id="r18">
+            <title>Chicken Teriyaki</title>
+            <cuisineTypes>
+                <cuisine>Japanese</cuisine>
+                <cuisine>Asian</cuisine>
+            </cuisineTypes>
+            <difficultyLevel>Intermediate</difficultyLevel>
+            <ingredients>
+                <ingredient>500g chicken thighs</ingredient>
+                <ingredient>Teriyaki sauce</ingredient>
+                <ingredient>Soy sauce</ingredient>
+                <ingredient>Honey or sugar</ingredient>
+                <ingredient>Ginger and garlic</ingredient>
+            </ingredients>
+            <instructions>
+                <step>Marinate chicken in teriyaki sauce.</step>
+                <step>Cook chicken in a pan until done.</step>
+                <step>Add sauce and simmer until glazed.</step>
+                <step>Serve with rice and vegetables.</step>
+            </instructions>
+        </recipe>
+        <recipe id="r19">
+            <title>Caprese Salad</title>
+            <cuisineTypes>
+                <cuisine>Italian</cuisine>
+                <cuisine>Mediterranean</cuisine>
+            </cuisineTypes>
+            <difficultyLevel>Beginner</difficultyLevel>
+            <cookingTime>10 minutes</cookingTime>
+            <servings>4</servings>
+            <ingredients>
+                <ingredient>Fresh mozzarella, sliced</ingredient>
+                <ingredient>Ripe tomatoes, sliced</ingredient>
+                <ingredient>Fresh basil leaves</ingredient>
+                <ingredient>Extra virgin olive oil</ingredient>
+                <ingredient>Balsamic vinegar</ingredient>
+                <ingredient>Salt and pepper</ingredient>
+            </ingredients>
+            <instructions>
+                <step>Arrange mozzarella and tomato slices alternately on a plate.</step>
+                <step>Tuck fresh basil leaves between slices.</step>
+                <step>Drizzle with olive oil and balsamic vinegar.</step>
+                <step>Season with salt and pepper.</step>
+                <step>Serve immediately.</step>
+            </instructions>
+        </recipe>
+        <recipe id="r20">
+            <title>Beef Bulgogi</title>
+            <cuisineTypes>
+                <cuisine>Korean</cuisine>
+                <cuisine>Asian</cuisine>
+            </cuisineTypes>
+            <difficultyLevel>Intermediate</difficultyLevel>
+            <ingredients>
+                <ingredient>500g beef, thinly sliced</ingredient>
+                <ingredient>Soy sauce</ingredient>
+                <ingredient>Sesame oil</ingredient>
+                <ingredient>Garlic and ginger</ingredient>
+                <ingredient>Pear or apple for sweetness</ingredient>
+            </ingredients>
+            <instructions>
+                <step>Marinate beef in bulgogi sauce for at least 30 minutes.</step>
+                <step>Cook in a hot pan or grill until caramelized.</step>
+                <step>Serve with rice and Korean side dishes.</step>
+            </instructions>
+        </recipe>
+        <recipe id="r21">
+            <title>Fish and Chips</title>
+            <cuisineTypes>
+                <cuisine>British</cuisine>
+                <cuisine>European</cuisine>
+            </cuisineTypes>
+            <difficultyLevel>Intermediate</difficultyLevel>
+            <ingredients>
+                <ingredient>4 fish fillets (cod or haddock)</ingredient>
+                <ingredient>Beer batter</ingredient>
+                <ingredient>Potatoes for chips</ingredient>
+                <ingredient>Flour for coating</ingredient>
+            </ingredients>
+            <instructions>
+                <step>Cut potatoes into chips and fry until golden.</step>
+                <step>Dip fish in batter and deep fry until crispy.</step>
+                <step>Drain on paper towels.</step>
+                <step>Serve with chips, tartar sauce, and lemon.</step>
+            </instructions>
+        </recipe>
+        <recipe id="r22">
+            <title>Chicken Biryani</title>
+            <cuisineTypes>
+                <cuisine>Indian</cuisine>
+                <cuisine>Asian</cuisine>
+            </cuisineTypes>
+            <difficultyLevel>Advanced</difficultyLevel>
+            <ingredients>
+                <ingredient>500g chicken, cut into pieces</ingredient>
+                <ingredient>2 cups basmati rice</ingredient>
+                <ingredient>Biryani spices</ingredient>
+                <ingredient>Yogurt</ingredient>
+                <ingredient>Onions, fried</ingredient>
+            </ingredients>
+            <instructions>
+                <step>Marinate chicken in yogurt and spices.</step>
+                <step>Parboil rice until half cooked.</step>
+                <step>Layer chicken and rice in a pot.</step>
+                <step>Cook on low heat until done (dum method).</step>
+            </instructions>
+        </recipe>
+    </recipes>
+    <users>
+        <user id="u1">
+            <name>John</name>
+            <surname>Doe</surname>
+            <cookingSkillLevel>Intermediate</cookingSkillLevel>
+            <preferredCuisineType>Italian</preferredCuisineType>
+        </user>
+    </users>
+</recipeData>
+
