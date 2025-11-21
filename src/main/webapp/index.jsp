@@ -15,11 +15,17 @@
         </header>
 
         <section class="search-section">
-            <form action="${pageContext.request.contextPath}/search" method="get" class="search-form">
-                <input type="text" name="q" placeholder="Search recipes by name, description, or ingredients..." 
-                       class="search-input" autocomplete="off">
+            <form action="${pageContext.request.contextPath}/search" method="get" class="search-form" id="searchForm">
+                <div class="search-input-wrapper">
+                    <input type="text" name="q" id="searchInput" 
+                           placeholder="Search recipes by name, description, or ingredients..." 
+                           class="search-input" autocomplete="off">
+                    <span class="search-icon">🔍</span>
+                    <div class="search-loading" id="searchLoading" style="display: none;">⏳</div>
+                </div>
                 <button type="submit" class="btn btn-search">Search</button>
             </form>
+            <div id="searchResults" class="search-results-container"></div>
         </section>
 
         <nav class="main-nav">
@@ -75,6 +81,113 @@
             </div>
         </section>
     </div>
+    
+    <script>
+        (function() {
+            const searchInput = document.getElementById('searchInput');
+            const searchResults = document.getElementById('searchResults');
+            const searchLoading = document.getElementById('searchLoading');
+            const searchForm = document.getElementById('searchForm');
+            let debounceTimer;
+            
+            // Debounce function
+            function debounce(func, wait) {
+                return function executedFunction(...args) {
+                    const later = () => {
+                        clearTimeout(debounceTimer);
+                        func(...args);
+                    };
+                    clearTimeout(debounceTimer);
+                    debounceTimer = setTimeout(later, wait);
+                };
+            }
+            
+            // Perform live search
+            function performSearch(query) {
+                if (!query || query.trim().length === 0) {
+                    searchResults.innerHTML = '';
+                    searchResults.style.display = 'none';
+                    return;
+                }
+                
+                if (query.trim().length < 2) {
+                    searchResults.innerHTML = '<div class="search-message">Type at least 2 characters to search</div>';
+                    searchResults.style.display = 'block';
+                    return;
+                }
+                
+                searchLoading.style.display = 'inline-block';
+                searchResults.style.display = 'block';
+                searchResults.innerHTML = '<div class="search-message">Searching...</div>';
+                
+                // Fetch search results
+                fetch('${pageContext.request.contextPath}/search?q=' + encodeURIComponent(query))
+                    .then(response => response.text())
+                    .then(html => {
+                        // Parse the HTML response to extract recipe cards
+                        const parser = new DOMParser();
+                        const doc = parser.parseFromString(html, 'text/html');
+                        const recipesGrid = doc.querySelector('.recipes-grid');
+                        const infoBox = doc.querySelector('.info-box');
+                        const emptyState = doc.querySelector('.empty-state');
+                        
+                        searchLoading.style.display = 'none';
+                        
+                        if (recipesGrid && recipesGrid.children.length > 0) {
+                            let resultsHTML = '';
+                            if (infoBox) {
+                                resultsHTML += infoBox.outerHTML;
+                            }
+                            resultsHTML += recipesGrid.outerHTML;
+                            searchResults.innerHTML = resultsHTML;
+                        } else if (emptyState) {
+                            searchResults.innerHTML = emptyState.outerHTML;
+                        } else {
+                            searchResults.innerHTML = '<div class="search-message">No recipes found</div>';
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Search error:', error);
+                        searchLoading.style.display = 'none';
+                        searchResults.innerHTML = '<div class="search-message error">Error performing search. Please try again.</div>';
+                    });
+            }
+            
+            // Debounced search function (300ms delay)
+            const debouncedSearch = debounce(performSearch, 300);
+            
+            // Listen for input changes
+            searchInput.addEventListener('input', function(e) {
+                const query = e.target.value.trim();
+                debouncedSearch(query);
+            });
+            
+            // Handle form submission (prevent default for live search)
+            searchForm.addEventListener('submit', function(e) {
+                const query = searchInput.value.trim();
+                if (query.length >= 2) {
+                    // Allow form submission for full page navigation
+                    return true;
+                }
+                e.preventDefault();
+                return false;
+            });
+            
+            // Clear results when input is empty
+            searchInput.addEventListener('focus', function() {
+                if (this.value.trim().length >= 2) {
+                    performSearch(this.value.trim());
+                }
+            });
+            
+            // Hide results when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!searchForm.contains(e.target) && !searchResults.contains(e.target)) {
+                    searchResults.style.display = 'none';
+                }
+            });
+        })();
+    </script>
 </body>
 </html>
 
